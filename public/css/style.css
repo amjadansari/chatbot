@@ -89,3 +89,9 @@ button:focus {
 .fa-github::before {
     content: "\f09b";
 }
+
+#messagesDiv {
+  height: 200px;
+  border: 1px solid;
+  background: #fff;
+}
