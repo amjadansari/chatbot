@@ -28,7 +28,6 @@ recognition.addEventListener('result', (e) => {
 
   outputYou.textContent = text;
   console.log('Confidence: ' + e.results[0][0].confidence);
-
   socket.emit('chat message', text);
 });
 
@@ -39,6 +38,8 @@ recognition.addEventListener('speechend', () => {
 recognition.addEventListener('error', (e) => {
   outputBot.textContent = 'Error: ' + e.error;
 });
+
+console.log(text);
 
 function synthVoice(text) {
   const synth = window.speechSynthesis;
