@@ -61,8 +61,6 @@ recognition.addEventListener('error', (e) => {
   outputBot.textContent = 'Error: ' + e.error;
 });
 
-console.log(text);
-
 function synthVoice(text) {
   const synth = window.speechSynthesis;
   const utterance = new SpeechSynthesisUtterance();
