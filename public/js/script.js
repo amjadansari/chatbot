@@ -66,10 +66,11 @@ function synthVoice(text) {
   const synth = window.speechSynthesis;
   const utterance = new SpeechSynthesisUtterance();
   utterance.text = text;
+  console.log(utterance);
   synth.speak(utterance);
   var name = "AI Bot";
-  function displayChatMessage(name, text) {
-    $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
+  function displayChatMessage(name, utterance) {
+    $('<div/>').text(utterance).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
     $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
   };
 }
