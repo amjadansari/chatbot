@@ -64,7 +64,10 @@ function synthVoice(text) {
   const synth = window.speechSynthesis;
   const utterance = new SpeechSynthesisUtterance();
   utterance.text = text;
-  console.log(utterance);
+  console.log(text);
+  if (text == '') {
+    text == "I dont have any Answer for that)";
+  }
   synth.speak(utterance);
   var name = "AI Bot";
     $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
