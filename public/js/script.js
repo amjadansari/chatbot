@@ -67,7 +67,7 @@ function synthVoice(text) {
   console.log(utterance);
   synth.speak(utterance);
   var name = "AI Bot";
-    $('<div/>').text(utterance).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
+    $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
     $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
 }
 
