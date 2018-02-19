@@ -41,16 +41,27 @@ recognition.addEventListener('error', (e) => {
   outputBot.textContent = 'Error: ' + e.error;
 });
 
-function synthVoice(text) {
-  const synth = window.speechSynthesis;
-  const utterance = new SpeechSynthesisUtterance();
-  utterance.text = text;
-  synth.speak(utterance);
-}
+$( document ).ready(function() {
+    console.log( "ready!" );
+    $("#kat").keydown(function(){
+       alert("Hello");
+       var text = $(this).val();
 
-socket.on('bot reply', function(replyText) {
-  synthVoice(replyText);
+       // Custom Input
+      function synthVoice(text) {
+        const synth = window.speechSynthesis;
+        const utterance = new SpeechSynthesisUtterance();
+        utterance.text = text;
+        synth.speak(utterance);
+      }
 
-  if(replyText == '') replyText = '(No answer...)';
-  outputBot.textContent = replyText;
+      socket.on('bot reply', function(replyText) {
+        synthVoice(replyText);
+
+        if(replyText == '') replyText = '(No answer...)';
+        outputBot.textContent = replyText;
+      });
+
+
+    });
 });
