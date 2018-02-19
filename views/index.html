@@ -8,8 +8,15 @@
     <meta name="author" content="Amjad Ansari">
 
     <title>Simple AI Demo with Web Speech API</title>
-
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -22,10 +29,11 @@
 
       <div>
           <p>You said: <em class="output-you">...</em></p>
+          <input type="text" name="" class="typed-text">
           <p>Bot replied: <em class="output-bot">...</em></p>
       </div>
     </section>
-    
+
     <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
     <script>
       // Initialize Firebase
