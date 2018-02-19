@@ -41,30 +41,16 @@ recognition.addEventListener('error', (e) => {
   outputBot.textContent = 'Error: ' + e.error;
 });
 
-$( document ).ready(function() {
-    console.log( "ready!" );
-    $("#kat").keydown(function(){
-      if(e.keyCode == 13) {
-          console.log("Hello");
-          var text = $(this).val();
-      }
+function synthVoice(text) {
+  const synth = window.speechSynthesis;
+  const utterance = new SpeechSynthesisUtterance();
+  utterance.text = text;
+  synth.speak(utterance);
+}
 
+socket.on('bot reply', function(replyText) {
+  synthVoice(replyText);
 
-       // Custom Input
-      function synthVoice(text) {
-        const synth = window.speechSynthesis;
-        const utterance = new SpeechSynthesisUtterance();
-        utterance.text = text;
-        synth.speak(utterance);
-      }
-
-      socket.on('bot reply', function(replyText) {
-        synthVoice(replyText);
-
-        if(replyText == '') replyText = '(No answer...)';
-        outputBot.textContent = replyText;
-      });
-
-
-    });
+  if(replyText == '') replyText = '(No answer...)';
+  outputBot.textContent = replyText;
 });
