@@ -23,25 +23,12 @@
       <button><i class="fa fa-microphone"></i></button>
 
       <div>
+          <div id='messagesDiv'></div>
           <p>You said: <em class="output-you">...</em></p>
           <input type="text" name="" class="typed-text">
           <p>Bot replied: <em class="output-bot">...</em></p>
       </div>
     </section>
-
-    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
-    <script>
-      // Initialize Firebase
-      var config = {
-        apiKey: "AIzaSyAxBJm3w6KRxFHLYXVdiirczfkT5t526_U",
-        authDomain: "agent-name-1-24488.firebaseapp.com",
-        databaseURL: "https://agent-name-1-24488.firebaseio.com",
-        projectId: "agent-name-1-24488",
-        storageBucket: "agent-name-1-24488.appspot.com",
-        messagingSenderId: "150409423626"
-      };
-      firebase.initializeApp(config);
-    </script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/script.js"></script>
   </body>

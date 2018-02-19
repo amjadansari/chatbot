@@ -41,17 +41,18 @@ recognition.addEventListener('result', (e) => {
   var inputTextValue;
 
   function keyup(e) {
-    //setting your input text to the global Javascript Variable for every key press
     inputTextValue = e.target.value;
-    
-    //listens for you to press the ENTER key, at which point your web address will change to the one you have input in the search box
+    var name = "Me";
     if (e.keyCode == 13) {
       let text = inputTextValue;
+      console.log(text);
       socket.emit('chat message', text);
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
     }
   }
-
-
 
 recognition.addEventListener('speechend', () => {
   recognition.stop();
@@ -66,11 +67,16 @@ function synthVoice(text) {
   const utterance = new SpeechSynthesisUtterance();
   utterance.text = text;
   synth.speak(utterance);
+  var name = "AI Bot";
+  function displayChatMessage(name, text) {
+    $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
+    $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+  };
 }
 
 socket.on('bot reply', function(replyText) {
   synthVoice(replyText);
 
-  if(replyText == '') replyText = '(No answer...)';
+  if(replyText == '') replyText = '(I dont have any Answer for that)';
   outputBot.textContent = replyText;
 });
