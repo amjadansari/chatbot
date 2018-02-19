@@ -44,8 +44,11 @@ recognition.addEventListener('error', (e) => {
 $( document ).ready(function() {
     console.log( "ready!" );
     $("#kat").keydown(function(){
-       alert("Hello");
-       var text = $(this).val();
+      if(e.keyCode == 13) {
+          console.log("Hello");
+          var text = $(this).val();
+      }
+
 
        // Custom Input
       function synthVoice(text) {

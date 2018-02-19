@@ -89,3 +89,7 @@ button:focus {
 .fa-github::before {
     content: "\f09b";
 }
+
+.typed, .input-you {
+  display: inline-block;
+}
