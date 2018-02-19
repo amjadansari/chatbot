@@ -49,6 +49,7 @@ recognition.addEventListener('result', (e) => {
       socket.emit('chat message', text);
         $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
         $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+        $(".typed-text").val("");
     }
   }
 
