@@ -47,10 +47,8 @@ recognition.addEventListener('result', (e) => {
       let text = inputTextValue;
       console.log(text);
       socket.emit('chat message', text);
-      function displayChatMessage(name, text) {
         $('<div/>').text(text).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
         $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-      };
     }
   }
 
@@ -69,10 +67,8 @@ function synthVoice(text) {
   console.log(utterance);
   synth.speak(utterance);
   var name = "AI Bot";
-  function displayChatMessage(name, utterance) {
     $('<div/>').text(utterance).prepend($('<em/>').text(name + ': ')).appendTo($('#messagesDiv'));
     $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
-  };
 }
 
 socket.on('bot reply', function(replyText) {
