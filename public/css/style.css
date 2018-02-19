@@ -94,4 +94,9 @@ button:focus {
   height: 200px;
   border: 1px solid;
   background: #fff;
+  overflow: scroll;
 }
+
+#messagesDiv:nth-child(even) {background: #00bce4}
+#messagesDiv:nth-child(odd) {background: #caccd1}
+em{font-weight: 600; font-style: normal;}
