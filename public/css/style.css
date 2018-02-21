@@ -45,8 +45,8 @@ section {
 }
 button {
       position: absolute;
-    left: 90%;
-    top: -23%;
+    left: 97%;
+    top: -9%;
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 50px;
@@ -102,11 +102,25 @@ button:focus {
 #messagesDiv div:nth-child(even) {background: #00bce4}
 #messagesDiv div:nth-child(odd) {background: #caccd1}
 em{font-weight: 600; font-style: normal;}
-.typed-text {    
+.typed-text {
   width: 100%;
   padding: 5px;
   font-size: 14px;}
 
 .inputbox {
   position: relative;
+}
+
+.chatbox {
+  width: 100%;
+  padding: 0px 15%;
+}
+
+.submitbtn {
+  margin-top: 30px;
+  font-weight: 600;
+  background: #39C2C9;
+  padding: 5px 10px;
+  display: block;
+  width: 87px;
 }

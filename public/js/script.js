@@ -37,6 +37,10 @@ recognition.addEventListener('result', (e) => {
  //creates a listener for when you press a key
   window.onkeyup = keyup;
 
+// Manual click
+  $( ".submitbtn" ).click(function() {
+    keyup();
+  });
   //creates a global Javascript variable
   var inputTextValue;
 
