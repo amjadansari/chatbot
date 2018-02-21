@@ -148,12 +148,9 @@ em{font-weight: 600; font-style: normal;}
 
 
   display: inline-block;
-    /* color: #fff; */
-    /* border-radius: 50%; */
-    /* padding: 8px; */
     position: absolute;
      left: 80%; 
-    top: -9%;
+    top: 9%;
     -webkit-appearance: none;
     -moz-appearance: none;
     width: 50px;
@@ -161,7 +158,6 @@ em{font-weight: 600; font-style: normal;}
     border: 0;
     border-radius: 50%;
     padding: .7em 1em;
-    /* margin: 4em auto 3em; */
     text-align: center;
     color: #fff;
     background: linear-gradient(180deg, #39C2C9 0%, #3FC8C9 80%, #3FC8C9 100%);
