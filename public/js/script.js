@@ -39,7 +39,6 @@ recognition.addEventListener('result', (e) => {
 
 // Manual click
   $('#sub-btn').click(function(){
-    debugger
     var e = $.Event("keypress");
     e.keyCode = 13; // # Some key code value
     $('.typed-text').trigger(e);
