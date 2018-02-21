@@ -38,8 +38,12 @@ recognition.addEventListener('result', (e) => {
   window.onkeyup = keyup;
 
 // Manual click
-  $( ".submitbtn" ).click(function() {
-    keyup();
+  $('#sub-btn').click(function(){
+    debugger
+    var e = $.Event("keypress");
+    e.keyCode = 13; // # Some key code value
+    $('.typed-text').trigger(e);
+    console.log("Enter Clicked");
   });
   //creates a global Javascript variable
   var inputTextValue;
