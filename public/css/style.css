@@ -123,4 +123,5 @@ em{font-weight: 600; font-style: normal;}
   padding: 5px 10px;
   display: block;
   width: 87px;
+  cursor: pointer;
 }

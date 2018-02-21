@@ -43,6 +43,7 @@ recognition.addEventListener('result', (e) => {
     e.keyCode = 13; // # Some key code value
     $('.typed-text').trigger(e);
     console.log("Enter Clicked");
+    keyup(e);
   });
   //creates a global Javascript variable
   var inputTextValue;
