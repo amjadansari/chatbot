@@ -36,8 +36,11 @@ h1 {
   font-size: 3em;
 }
 h2 {
-  font-weight: 300;
-  margin-top: 0.5em;
+    font-weight: 300;
+    margin-top: 0.5em;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    padding: 12px;
 }
 section {
   margin: 1.5em auto;
@@ -46,7 +49,7 @@ section {
 .voice {
       position: absolute;
     left: 90%;
-    top: -9%;
+    top: 9%;
   -webkit-appearance: none;
   -moz-appearance: none;
   width: 50px;
@@ -99,8 +102,29 @@ button:focus {
   overflow: scroll;
 }
 
-#messagesDiv div:nth-child(even) {background: #00bce4}
-#messagesDiv div:nth-child(odd) {background: #caccd1}
+#messagesDiv div:nth-child(even) {
+    background: #00a8e0;
+    color: #fff;
+    padding: 10px;
+    width: 70%;
+    margin: 7px;
+    border-radius: 12px;
+    float: right;
+    -moz-box-shadow:    0 7px 6px -4px #000000;
+   -webkit-box-shadow: 0 7px 6px -4px #000000;
+   box-shadow:         0 7px 6px -4px #000000;
+}
+#messagesDiv div:nth-child(odd) {
+    background: #fff;
+    padding: 10px;
+    width: 70%;
+    margin: 7px;
+    border-radius: 12px;
+    float: left;
+    -moz-box-shadow:    0 7px 6px -4px #000000;
+   -webkit-box-shadow: 0 7px 6px -4px #000000;
+   box-shadow:         0 7px 6px -4px #000000;
+}
 em{font-weight: 600; font-style: normal;}
 .typed-text {
   width: 78%;
@@ -108,10 +132,11 @@ em{font-weight: 600; font-style: normal;}
   font-size: 14px;}
 
 .inputbox {
-  position: relative;
-  margin-top: -53px;
-  background: transparent;
-  margin-left: 10px;
+    position: relative;
+    margin-top: 5px;
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+    width: 100%;
 }
 
 .chatbox {
